@@ -1,5 +1,10 @@
 ## THIS IS JUST SOMETHING THAT INTERESTS ME, HOPING TO LEARN FROM IT
 
+# Code copied from https://github.com/idrirap/LoadLoraWithTags for ease of testing.
+
+
+# Original project links below. 
+
 ![image](https://github.com/Extraltodeus/LoadLoraWithTags/assets/15731540/150f926f-6c9e-44d0-801f-7de6df9d6993)
 
 # LoadLoraWithTags
