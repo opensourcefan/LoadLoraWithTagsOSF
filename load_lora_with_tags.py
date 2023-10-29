@@ -107,7 +107,7 @@ class LoraLoaderTagsQuery:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "LIST",)
     RETURN_NAMES = ("MODEL", "CLIP", "civitai_tags", "civitai_tags_list")
     FUNCTION = "load_lora"
-    CATEGORY = "llwt"
+    CATEGORY = "LoadLoraWithTagsOSF"
 
     def load_lora(self, model, clip, lora_name, strength_model, strength_clip, query_tags, tags_out, print_tags, bypass, force_fetch, opt_prompt=None):
         if strength_model == 0 and strength_clip == 0 or bypass:
@@ -167,7 +167,7 @@ class LoraTagsQueryOnly:
     RETURN_TYPES = ("STRING", "LIST",)
     RETURN_NAMES = ("civitai_tags", "civitai_tags_list")
     FUNCTION = "load_lora"
-    CATEGORY = "llwt"
+    CATEGORY = "LoadLoraWithTagsOSF"
 
     def load_lora(self, lora_name, query_tags, tags_out, print_tags, force_fetch, opt_prompt=None):
         _, output_tags, output_tags_list = load_and_save_tags(lora_name, print_tags, query_tags, force_fetch)
@@ -197,7 +197,7 @@ class TagsSelector:
     
     RETURN_TYPES = ("STRING",)
     FUNCTION = "select_tags"
-    CATEGORY = "llwt"
+    CATEGORY = "LoadLoraWithTagsOSF"
 
     def select_tags(self, tags_list, selector):
         range_index_list = selector.split(",")
@@ -246,7 +246,7 @@ class TagsViewer:
     
     RETURN_TYPES = ("STRING",)
     FUNCTION = "format_tags"
-    CATEGORY = "llwt"
+    CATEGORY = "LoadLoraWithTagsOSF"
 
     def format_tags(self, tags_list):
         output = ""
